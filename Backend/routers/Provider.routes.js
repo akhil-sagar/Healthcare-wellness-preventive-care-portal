@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const ProviderController = require('../Controllers/Provider.controller');
-const authmiddleware = require('../middleware/auth.middleware');    
+const {authenticateProvider} = require('../middleware/auth.middleware');    
 const {body} = require('express-validator');
 router.post('/signup',
     [body('firstName').notEmpty().withMessage('First name is required'),
@@ -17,8 +17,10 @@ router.post('/login',
     ProviderController.login
 );
 
-router.get('/profile/', authmiddleware, ProviderController.getProviderProfile);
-router.put('/profile/', authmiddleware, ProviderController.updateProviderProfile);
+router.post('/logout', ProviderController.logout);
+
+router.get('/profile/', authenticateProvider, ProviderController.getProviderProfile);
+router.put('/profile/', authenticateProvider, ProviderController.updateProviderProfile);
 
 module.exports = router;
 

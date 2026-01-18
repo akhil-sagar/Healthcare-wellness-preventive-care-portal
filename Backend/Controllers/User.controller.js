@@ -1,4 +1,4 @@
-const {User}=require('../Models/user.model');
+const User = require('../Models/user.model');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const BlackList = require('../Models/blackList.model');
@@ -50,15 +50,11 @@ exports.login = async (req, res) => {
         if (!isMatch) {
             return res.status(400).json({ message: 'Invalid email or password' });
         }
-        
-        // Generate JWT token
         const token = jwt.sign(
             { id: user._id, email: user.email, role: 'user' },
             process.env.JWT_SECRET || 'your-secret-key',
             { expiresIn: '24h' }
         );
-        
-        // Set cookie
         res.cookie('token', token, {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',
@@ -118,11 +114,8 @@ exports.logout = async (req, res) => {
         const token = req.cookies.token || req.headers.authorization?.split(' ')[1];
         
         if (token) {
-            // Add token to blacklist
             await BlackList.create({ token });
         }
-        
-        // Clear cookie
         res.clearCookie('token', {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production'
