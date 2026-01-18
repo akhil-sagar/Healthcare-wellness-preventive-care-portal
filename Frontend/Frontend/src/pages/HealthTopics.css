@@ -1,0 +1,47 @@
+.topics-heading {
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.topics-grid {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.topic-card {
+  background: white;
+  width: 260px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.topic-card:hover {
+  transform: translateY(-4px);
+}
+
+.topic-card h4 {
+  margin-bottom: 10px;
+}
+
+.topic-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 14px;
+}
+
+.topic-btn {
+  padding: 6px 14px;
+  background-color: #2f2f2f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.topic-btn:hover {
+  background-color: #444;
+}
