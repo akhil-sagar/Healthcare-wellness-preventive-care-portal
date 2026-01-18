@@ -1,4 +1,4 @@
-const {Provider}=require('../Models/Provider.model');
+const Provider = require('../Models/Provider.model');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const BlackList = require('../Models/blackList.model');
@@ -16,15 +16,11 @@ exports.signUp = async (req, res) => {
             password: hashedPassword
         });
         await newProvider.save();
-        
-        // Generate JWT token
         const token = jwt.sign(
             { id: newProvider._id, email: newProvider.email, role: 'provider' },
             process.env.JWT_SECRET || 'your-secret-key',
             { expiresIn: '24h' }
         );
-        
-        // Set cookie
         res.cookie('token', token, {
             httpOnly: true,
             secure: process.env.NODE_ENV === 'production',

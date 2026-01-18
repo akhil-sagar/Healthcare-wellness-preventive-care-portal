@@ -15,11 +15,9 @@ const UserSchema = new Schema({
     },
     age:{
         type: Number,
-        required: true,
     },
     gender:{
         type: String,
-        required: true,
     },
     allergies:{
         type: [MedicalRecord.schema],

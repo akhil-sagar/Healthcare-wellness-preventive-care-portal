@@ -1,6 +1,6 @@
-const {User} = require('../Models/user.model');
+const User = require('../Models/user.model');
 const jwt = require('jsonwebtoken');
-const {Provider} = require('../Models/Provider.model');
+const Provider = require('../Models/Provider.model');
 
 exports.authenticateUser = async (req, res, next) => {
     const token = req.header('Authorization')?.replace('Bearer ', '');

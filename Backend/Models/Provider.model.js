@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const bcrypt = require('bcrypt');
-const {User} = require('./user.model');
 const ProviderSchema = new Schema({
     name:{
         firstName:{
@@ -23,7 +22,7 @@ const ProviderSchema = new Schema({
         required: true,
     },
     patients:{
-        type:[User.schema], 
+        type: [{ type: String, ref: 'User' }],
     },
 }, { timestamps: true });
 const Provider = mongoose.model('Provider', ProviderSchema);
