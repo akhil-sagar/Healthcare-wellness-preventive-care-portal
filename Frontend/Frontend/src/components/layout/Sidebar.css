@@ -1,0 +1,32 @@
+.sidebar {
+  width: 220px;
+  background-color: #2f2f2f;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar-title {
+  margin-bottom: 24px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 16px;
+}
+
+.sidebar-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.sidebar-menu a.active {
+  font-weight: 600;
+  color: #81c784;
+}

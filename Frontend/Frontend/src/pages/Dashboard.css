@@ -1,0 +1,64 @@
+.dashboard {
+  padding: 40px;
+}
+
+.dashboard-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a237e;
+  margin-bottom: 30px;
+}
+
+/* Sections */
+.dashboard-section {
+  margin-bottom: 36px;
+}
+
+.dashboard-section h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #2e7d32;
+}
+
+/* Wellness grid */
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+/* Metric text */
+.metric-value {
+  font-size: 14px;
+  color: #37474f;
+  margin-bottom: 8px;
+}
+
+.metric-extra {
+  font-size: 12px;
+  color: #607d8b;
+  margin-top: 6px;
+}
+
+/* Preventive care */
+.reminder-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.reminder-list li {
+  padding: 10px 14px;
+  background: #f1f8e9;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* Messages */
+.message-box {
+  background: #e3f2fd;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #1a237e;
+}
