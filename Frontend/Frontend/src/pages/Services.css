@@ -1,0 +1,80 @@
+.services-heading {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.services-sub {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.patient-table-wrapper {
+  background: white;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.patient-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.patient-table th,
+.patient-table td {
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.patient-table th {
+  background-color: #f2f2f2;
+}
+
+.patient-table tr:not(:last-child) {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.view-btn,
+.assign-btn {
+  padding: 6px 10px;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+.view-btn {
+  background-color: #1976d2;
+  color: white;
+}
+
+.assign-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.view-btn:hover {
+  background-color: #125aa0;
+}
+
+.assign-btn:hover {
+  background-color: #388e3c;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: white;
+}
+
+.status.active {
+  background-color: #4caf50;
+}
+
+.status.monitoring {
+  background-color: #ff9800;
+}
